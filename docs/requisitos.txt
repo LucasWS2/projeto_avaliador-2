@@ -1,0 +1,18 @@
+# 📄 Requisitos do Sistema de Controle de Loja
+
+O sistema deve permitir:
+
+✅ Login e autenticação de usuários cadastrados  
+✅ Cadastro de novos clientes com nome, telefone e email  
+✅ Cadastro de produtos com nome, preço e estoque  
+✅ Registro de vendas com seleção de cliente, múltiplos produtos e cálculo de total  
+✅ Armazenamento em banco MySQL com estrutura relacional  
+✅ Interface gráfica desenvolvida em Tkinter  
+✅ Estrutura organizada usando padrão MVC  
+✅ Tela principal com navegação entre funcionalidades  
+
+Regras de negócio:
+
+- Não é permitido registrar venda sem cliente ou sem produtos
+- O campo "nome" é obrigatório no cadastro de cliente e produto
+- Estoque e preço devem ser numéricos válidos

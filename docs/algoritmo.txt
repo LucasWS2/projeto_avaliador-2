@@ -1,0 +1,22 @@
+# 🧠 Algoritmo Descritivo das Funcionalidades
+
+## Login
+1. Usuário informa email e senha
+2. O sistema busca no banco e verifica se são válidos
+3. Se válido, redireciona para o painel principal
+
+## Cadastro de Cliente
+1. Usuário insere nome, telefone e email
+2. O sistema valida o campo nome
+3. Grava os dados na tabela `clientes`
+
+## Cadastro de Produto
+1. Usuário insere nome, preço e estoque
+2. O sistema valida os campos (nome obrigatório, preço/estoque numéricos)
+3. Grava na tabela `produtos`
+
+## Registro de Venda
+1. Usuário seleciona um cliente
+2. Escolhe um ou mais produtos e quantidades
+3. O sistema calcula o total
+4. Grava na tabela `vendas` e na `itens_venda` com os produtos comprados
