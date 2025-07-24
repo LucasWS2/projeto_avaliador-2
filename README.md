@@ -72,7 +72,7 @@ projeto_avaliador/
 
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/LucasWS2/projeto_avaliador.git
+   git clone https://github.com/LucasWS2/projeto_avaliador-2.git
    ```
 
 2. Crie um ambiente virtual e ative:
