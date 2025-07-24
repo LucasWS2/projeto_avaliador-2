@@ -1,10 +1,14 @@
 import tkinter as tk
 from tkinter import messagebox
+from views.cliente_view import ClienteView
+from views.produto_view import ProdutoView
+from views.venda_view import VendaView
 
 class HomeView:
     def __init__(self, usuario_nome):
         self.root = tk.Tk()
         self.root.title("Sistema de Loja - Painel Principal")
+        self.root.geometry("300x300")
 
         tk.Label(self.root, text=f"Bem-vindo, {usuario_nome}!", font=("Arial", 14)).pack(pady=10)
 
@@ -23,10 +27,10 @@ class HomeView:
         self.root.mainloop()
 
     def ir_para_clientes(self):
-        messagebox.showinfo("Em breve", "Tela de cadastro de clientes em construção.")
+        ClienteView()
 
     def ir_para_produtos(self):
-        messagebox.showinfo("Em breve", "Tela de cadastro de produtos em construção.")
+        ProdutoView()
 
     def ir_para_vendas(self):
-        messagebox.showinfo("Em breve", "Tela de registro de vendas em construção.")
+        VendaView()
