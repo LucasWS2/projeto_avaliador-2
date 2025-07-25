@@ -65,6 +65,7 @@ projeto_avaliador/
 - MySQL (armazenamento de dados)
 - mysql-connector-python
 - python-dotenv
+- bcrypt
 - Git + GitHub
 
 ---
