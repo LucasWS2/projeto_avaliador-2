@@ -1,94 +1,32 @@
-# 🏪 Sistema de Controle de Loja
 
-Sistema desktop completo para controle de vendas em uma loja, com interface gráfica em **Tkinter**, arquitetura **MVC** e banco de dados **MySQL**. Projeto desenvolvido para fins acadêmicos, com organização profissional e funcionalidades reais.
+# Projeto Avaliador - Sistema de Controle de Loja
 
----
+Sistema desenvolvido com Python e Tkinter para controle de clientes, produtos e vendas, utilizando MySQL como banco de dados.
 
-## 🎯 Objetivo
-
-Desenvolver um sistema desktop funcional para gerenciar uma loja, incluindo:
+## 🚀 Funcionalidades
+- Cadastro e login de usuários
 - Cadastro de clientes e produtos
-- Registro de vendas com múltiplos itens
-- Interface gráfica funcional e intuitiva
-- Armazenamento e relacionamento dos dados via MySQL
-- Estrutura em camadas (MVC) e boas práticas de código
-
----
-
-## ⚙️ Funcionalidades
-
-✅ Login de usuários com autenticação  
-✅ Cadastro de clientes (nome, telefone, email)  
-✅ Cadastro de produtos (nome, preço, estoque)  
-✅ Registro de vendas (cliente, múltiplos produtos, quantidade, total)  
-✅ Interface Tkinter com múltiplas janelas  
-✅ Integração com banco de dados MySQL  
-✅ Arquitetura organizada em **MVC**
-
----
-
-## 🧱 Estrutura do Projeto
-
-```
-projeto_avaliador/
-├── app/
-│   ├── controllers/
-│   ├── models/
-│   ├── views/
-│   ├── database/
-│   └── main.py
-├── docs/
-│   ├── requisitos.txt
-│   ├── algoritmo.txt 
-│   └── modelo_branco.sql
-├── .env
-├── setup_db.py
-├── README.md
-└── .gitignore
-```
-
----
-
-## 🗃 Banco de Dados
-
-- Banco: `loja_db`
-- Tabelas: `usuarios`, `clientes`, `produtos`, `vendas`, `itens_venda`
-- Relacionamentos com chaves estrangeiras
-- Diagrama ER incluso na pasta `/docs`
-
----
-
-## 💻 Tecnologias Utilizadas
-
-- Python 3
-- Tkinter (interface gráfica)
-- MySQL (armazenamento de dados)
-- mysql-connector-python
-- python-dotenv
-- bcrypt
-- Git + GitHub
-
----
+- Registro e visualização de vendas
 
 ## ▶️ Como executar localmente
 
-1. Clone o repositório:
+1. **Clone o repositório**  
    ```bash
    git clone https://github.com/LucasWS2/projeto_avaliador-2.git
    ```
 
-2. Crie um ambiente virtual e ative:
+2. **Crie um ambiente virtual e ative**  
    ```bash
    python -m venv .venv
    .\.venv\Scripts\activate  # Windows
    ```
 
-3. Instale as dependências:
+3. **Instale as dependências**  
    ```bash
    pip install -r requirements.txt
    ```
 
-4. Configure o arquivo `.env` com os dados do seu MySQL:
+4. **Configure o arquivo `.env` com os dados do seu MySQL**  
    ```env
    DB_HOST=localhost
    DB_USER=root
@@ -96,26 +34,50 @@ projeto_avaliador/
    DB_NAME=loja_db
    ```
 
-5. Crie o banco de dados:
+5. **Crie o banco de dados**
 
-### ✅ Opção 1 – Manual
-- Acesse o phpMyAdmin
-- Crie o banco `loja_db`
-- Importe o arquivo `docs/modelo_branco.sql`
+   ### ✅ Opção 1 – Manual
+   - Acesse o **phpMyAdmin**
+   - Crie o banco `loja_db`
+   - Importe o arquivo `docs/modelo_branco.sql`
 
-### ⚙️ Opção 2 – Automática
-- Execute o script de setup:
-   ```bash
-   python setup_db.py
-   ```
+   ### ⚙️ Opção 2 – Automática
+   - Execute o script de setup:  
+     ```bash
+     python setup_db.py
+     ```
 
-6. Rode o sistema:
-   ```bash
-   python app/main.py
-   ```
+     **Aviso:** Durante a execução, pode aparecer a seguinte mensagem:
+     ```
+     RuntimeError: generator raised StopIteration
+     ```
+     Isso é um comportamento conhecido do `mysql-connector` ao executar múltiplos comandos SQL.  
+     **Pode ser ignorado com segurança**, pois o banco e as tabelas serão criados normalmente.
 
----
+## 🧠 Tecnologias utilizadas
+- Python
+- Tkinter
+- MySQL
+- mysql-connector-python
+- python-dotenv
+
+## 📁 Organização do projeto
+```
+projeto_avaliador-2/
+│
+├── controllers/
+│   └── ... (lógica de controle de clientes, produtos e vendas)
+├── models/
+│   └── ... (interação com o banco de dados)
+├── views/
+│   └── ... (interfaces gráficas com Tkinter)
+├── docs/
+│   └── modelo_branco.sql
+├── .env
+├── setup_db.py
+├── main.py
+└── requirements.txt
+```
 
 ## 👨‍💻 Autor
-
 Lucas Agostinho Wszoek
