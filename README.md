@@ -41,9 +41,11 @@ projeto_avaliador/
 │   ├── requisitos.txt
 │   ├── algoritmo.txt
 │   ├── modelo_banco.png
-│   └── DER.png
+│   └── modelo_branco.sql
+├── .env
+├── setup_db.py
 ├── README.md
-└── .env
+└── .gitignore
 ```
 
 ---
@@ -77,8 +79,8 @@ projeto_avaliador/
 
 2. Crie um ambiente virtual e ative:
    ```bash
-   python -m venv venv
-   .\venv\Scripts\activate  # Windows
+   python -m venv .venv
+   .\.venv\Scripts\activate  # Windows
    ```
 
 3. Instale as dependências:
@@ -94,7 +96,20 @@ projeto_avaliador/
    DB_NAME=loja_db
    ```
 
-5. Rode o projeto:
+5. Crie o banco de dados:
+
+### ✅ Opção 1 – Manual
+- Acesse o phpMyAdmin
+- Crie o banco `loja_db`
+- Importe o arquivo `docs/modelo_branco.sql`
+
+### ⚙️ Opção 2 – Automática
+- Execute o script de setup:
+   ```bash
+   python setup_db.py
+   ```
+
+6. Rode o sistema:
    ```bash
    python app/main.py
    ```

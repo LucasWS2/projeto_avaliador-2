@@ -3,13 +3,18 @@ from database.conexao import conectar
 class UsuarioModel:
     @staticmethod
     def criar_usuario(nome, email, senha):
-        conn = conectar()
-        cursor = conn.cursor()
-        sql = "INSERT INTO usuarios (nome, email, senha) VALUES (%s, %s, %s)"
-        cursor.execute(sql, (nome, email, senha))
-        conn.commit()
-        cursor.close()
-        conn.close()
+        try:
+            conn = conectar()
+            cursor = conn.cursor()
+            sql = "INSERT INTO usuarios (nome, email, senha) VALUES (%s, %s, %s)"
+            cursor.execute(sql, (nome, email, senha))
+            conn.commit()
+            cursor.close()
+            conn.close()
+            return True
+        except Exception as e:
+            print("Erro ao criar usuário:", e)
+            return False
 
     @staticmethod
     def buscar_por_email(email):
@@ -31,3 +36,4 @@ class UsuarioModel:
         cursor.close()
         conn.close()
         return usuarios
+
