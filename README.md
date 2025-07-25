@@ -39,8 +39,7 @@ projeto_avaliador/
 │   └── main.py
 ├── docs/
 │   ├── requisitos.txt
-│   ├── algoritmo.txt
-│   ├── modelo_banco.png
+│   ├── algoritmo.txt 
 │   └── modelo_branco.sql
 ├── .env
 ├── setup_db.py
@@ -66,6 +65,7 @@ projeto_avaliador/
 - MySQL (armazenamento de dados)
 - mysql-connector-python
 - python-dotenv
+- bcrypt
 - Git + GitHub
 
 ---
